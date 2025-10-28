@@ -1,0 +1,9 @@
+# Ignore compiled class files
+*.class
+
+# Ignore logs, temp files, and IDE settings
+*.log
+.vscode/
+.idea/
+out/
+bin/

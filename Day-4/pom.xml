@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.selenium.demo</groupId>
+  <artifactId>seleniumproject</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>seleniumproject</name>
+  <url>http://maven.apache.org</url>
+
+  <dependencies>
+      <!-- Selenium dependency -->
+      <dependency>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-java</artifactId>
+          <version>4.25.0</version>
+      </dependency>
+
+      <!-- WebDriverManager for automatic driver setup -->
+      <dependency>
+          <groupId>io.github.bonigarcia</groupId>
+          <artifactId>webdrivermanager</artifactId>
+          <version>5.9.2</version>
+      </dependency>
+  </dependencies>
+
+  <build>
+      <plugins>
+          <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>exec-maven-plugin</artifactId>
+              <version>3.6.2</version>
+              <configuration>
+                  <!-- Only runs this default class if none is passed -->
+                  <mainClass>${exec.mainClass}</mainClass>
+                  <cleanupDaemonThreads>false</cleanupDaemonThreads>
+              </configuration>
+          </plugin>
+      </plugins>
+  </build>
+</project>
