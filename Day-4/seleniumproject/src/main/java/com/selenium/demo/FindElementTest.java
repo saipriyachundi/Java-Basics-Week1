@@ -20,7 +20,7 @@ public class FindElementTest {
 
         // Find the search box and type text
         WebElement searchBox = driver.findElement(By.name("q"));
-        searchBox.sendKeys("Selenium WebDriver ");
+        searchBox.sendKeys("Selenium WebDriver");
         searchBox.sendKeys(Keys.ENTER);
 
         // Wait for a few seconds to see the search results
